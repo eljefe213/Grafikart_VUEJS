@@ -1,12 +1,13 @@
 <template>
   <p>Compteur : {{ count }} </p>
+  <button v-on:click="increment" >Incrémenter</button>
 </template>
 
 <script setup>
 import {ref} from "vue";
 
 const count = ref(0)
-setInterval(() => {
+const increment = () => {
   count.value++
-}, 1000);
+}
 </script>
