@@ -8,10 +8,10 @@
 import {ref} from "vue";
 
 const count = ref(0)
-const increment = () => {
+const increment = (event) => {
   count.value++
 }
-const decrement = () => {
+const decrement = (event) => {
   count.value--
 }
 </script>
