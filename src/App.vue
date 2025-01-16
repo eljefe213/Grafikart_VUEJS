@@ -1,5 +1,5 @@
 <template>
-  <p v-bind:id="`p-${count}`">Compteur : {{ count }} </p>
+  <p :id="`p-${count}`">Compteur : {{ count }} </p>
   <button @click="increment" >Incrémenter</button>
   <button @click="decrement" >Decrémenter</button>
 </template>
