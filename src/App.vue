@@ -1,5 +1,5 @@
 <template>
-  <p :id="`p-${count}`">Compteur : {{ count }} </p>
+  <p :style="{color: 'red'}">Compteur : {{ count }} </p>
   <button @click="increment" >Incrémenter</button>
   <button @click="decrement" >Decrémenter</button>
 </template>
