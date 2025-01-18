@@ -15,3 +15,9 @@ const decrement = (event) => {
   count.value--
 }
 </script>
+
+<style>
+.active {
+  color: red;
+}
+</style>
