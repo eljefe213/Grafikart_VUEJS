@@ -2,6 +2,7 @@
   <p>Compteur : {{ count }}</p>
   <button @click="increment" >Incrémenter</button>
   <button @click="decrement" >Decrémenter</button>
+  <button @click="sortMovie">Réorganiser</button>
   <ul>
     <li v-for="movie in movies"> {{ movie }}
       <button @click="deleteMovie(movie)">Supprimer</button>
@@ -26,6 +27,9 @@ const decrement = (event) => {
 }
 const deleteMovie = (movie) => {
   movies.value = movies.value.filter(m => m !== movie)
+}
+const sortMovie = () => {
+  movies.value.sort((a,b) => a > b ? 1 : -1)
 }
 </script>
 
