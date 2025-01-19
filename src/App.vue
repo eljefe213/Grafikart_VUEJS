@@ -4,7 +4,8 @@
   <button @click="decrement" >Decrémenter</button>
   <button @click="sortMovie">Réorganiser</button>
   <ul>
-    <li v-for="movie in movies"> {{ movie }}
+    <li v-for="movie in movies"
+    :key="movie"> {{ movie }}
       <button @click="deleteMovie(movie)">Supprimer</button>
     </li>
   </ul>
