@@ -1,19 +1,31 @@
 <template>
-  <p>Compteur : {{ count }}<div v-html="firstName"></div> </p>
+  <p>Compteur : {{ count }}</p>
   <button @click="increment" >Incrémenter</button>
   <button @click="decrement" >Decrémenter</button>
+  <ul>
+    <li v-for="movie in movies"> {{ movie }}
+      <button @click="deleteMovie(movie)">Supprimer</button>
+    </li>
+  </ul>
 </template>
 
 <script setup>
 import {ref} from "vue";
 
 const count = ref(0)
-const firstName = '<span>Demo</span>'
+const movies = ref([
+    'Matrix',
+    'Lilo & Stitch',
+    'Titanic'
+])
 const increment = (event) => {
   count.value++
 }
 const decrement = (event) => {
   count.value--
+}
+const deleteMovie = (movie) => {
+  movies.value = movies.value.filter(m => m !== movie)
 }
 </script>
 
