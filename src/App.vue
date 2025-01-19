@@ -2,7 +2,12 @@
   <p>Compteur : {{ count }}</p>
   <button @click="increment" >Incrémenter</button>
   <button @click="decrement" >Decrémenter</button>
+  <hr>
   <button @click="sortMovie">Réorganiser</button>
+  <form action="" @submit.prevent="addMovie">
+    <input type="text" placeholder="Nouveau film" v-model="movieName">
+    <button>Ajouter</button>
+  </form>
   <ul>
     <li v-for="movie in movies"
     :key="movie"> {{ movie }}
@@ -15,6 +20,7 @@
 import {ref} from "vue";
 
 const count = ref(0)
+const movieName = ref('')
 const movies = ref([
     'Matrix',
     'Lilo & Stitch',
@@ -31,6 +37,10 @@ const deleteMovie = (movie) => {
 }
 const sortMovie = () => {
   movies.value.sort((a,b) => a > b ? 1 : -1)
+}
+const addMovie = () => {
+  movies.value.push(movieName.value)
+  movieName.value = ''
 }
 </script>
 
