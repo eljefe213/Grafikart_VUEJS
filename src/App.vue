@@ -1,10 +1,10 @@
 <template>
   <h1>Ma todolist :</h1>
   <Layout>
-    <template v-slot:header>En tête</template>
-    <template v-slot:aside>Sidebar</template>
-    <template v-slot:main>Main</template>
-    <template v-slot:footer>Footer</template>
+    <template #header>En tête</template>
+    <template #aside>Sidebar</template>
+    <template #main>Main</template>
+    <template #footer>Footer</template>
   </Layout>
   <form @submit.prevent="addTodo">
     <fieldset role="group">
