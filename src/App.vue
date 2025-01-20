@@ -23,7 +23,7 @@
     <p v-if="remainingTodos > 0">
       {{ remainingTodos}} tâche{{ remainingTodos > 1 ? 's' : ''}} à faire
     </p>
-    <checkbox/>
+    <checkbox label="Bonjour"/>
   </div>
 </template>
 
