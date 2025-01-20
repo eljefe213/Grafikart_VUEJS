@@ -1,7 +1,7 @@
 <template>
 <label>
   <input type="checkbox">
-  lorem ipsum dolor
+  {{ label }}
 </label>
 </template>
 <script setup>
