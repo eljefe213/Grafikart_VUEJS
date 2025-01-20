@@ -8,5 +8,5 @@
 defineProps({
   label: String
 })
-defineEmits(['check', 'uncheck'])
+ const emits = defineEmits(['check', 'uncheck'])
 </script>
