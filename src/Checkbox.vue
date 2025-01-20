@@ -5,7 +5,7 @@
 </label>
 </template>
 <script setup>
-const props = defineProps({
+defineProps({
   label: String
 })
 </script>
