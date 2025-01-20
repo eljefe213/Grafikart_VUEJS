@@ -52,6 +52,9 @@ const sortedTodos = computed(() => {
   }
   return sortedTodos
 })
+const remainingTodos = computed(() => {
+  return todos.value.filter(t => t.competed === false).length
+})
 </script>
 
 <style>
