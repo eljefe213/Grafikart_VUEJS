@@ -1,6 +1,11 @@
 <template>
   <h1>Ma todolist :</h1>
-  <Button>azerty</Button>
+  <Layout>
+    <template v-slot:header>En tête</template>
+    <template v-slot:aside>Sidebar</template>
+    <template v-slot:main>Main</template>
+    <template v-slot:footer>Footer</template>
+  </Layout>
   <form @submit.prevent="addTodo">
     <fieldset role="group">
       <input type="text" placeholder="Tâche à effectuer" v-model="newTodo">
@@ -29,6 +34,7 @@
 import {computed, ref} from "vue";
 import Checkbox from './Checkbox.vue';
 import Button from './Button.vue';
+import Layout from "@/Layout.vue";
 
 const newTodo = ref('')
 const hideCompleted = ref(false)
