@@ -1,5 +1,6 @@
 <template>
   <h1>Ma todolist :</h1>
+  <Button>azerty</Button>
   <form @submit.prevent="addTodo">
     <fieldset role="group">
       <input type="text" placeholder="Tâche à effectuer" v-model="newTodo">
@@ -26,7 +27,8 @@
 
 <script setup>
 import {computed, ref} from "vue";
-import Checkbox from './Checkbox.vue'
+import Checkbox from './Checkbox.vue';
+import Button from './Button.vue';
 
 const newTodo = ref('')
 const hideCompleted = ref(false)
