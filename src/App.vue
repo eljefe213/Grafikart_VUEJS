@@ -20,6 +20,9 @@
       <input type="checkbox" v-model="hideCompleted">
       Masquer les tâches complétées
     </label>
+    <p v-if="remainingTodos > 0">
+      {{ remainingTodos}} tâche{{ remainingTodos > 1 ? 's' : ''}} à faire
+    </p>
   </div>
 </template>
 
@@ -53,7 +56,7 @@ const sortedTodos = computed(() => {
   return sortedTodos
 })
 const remainingTodos = computed(() => {
-  return todos.value.filter(t => t.competed === false).length
+  return todos.value.filter(t => t.completed === false).length
 })
 </script>
 
