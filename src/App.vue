@@ -1,5 +1,5 @@
 <template>
-  <h1>Ma todolist :</h1>
+  <h1>Ma todo-list :</h1>
   <Layout>
     <template #header>En tête</template>
     <template #aside>Sidebar</template>
