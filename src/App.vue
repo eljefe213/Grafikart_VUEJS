@@ -40,6 +40,11 @@ const newTodo = ref('')
 const hideCompleted = ref(false)
 const todos = ref([])
 
+onMounted(() => {
+  fetch('https://jsonplaceholder.typicode.com/todos')
+      .then(r => r.json())
+      .then(v => todos.value = v.map(todo => ({ ...todo, date: todo.id })))
+})
 
 const addTodo = () => {
   todos.value.push({
