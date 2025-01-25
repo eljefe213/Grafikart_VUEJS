@@ -1,11 +1,6 @@
 <template>
   <h1>Ma todo-list :</h1>
-  <Layout>
-    <template #header>En tête</template>
-    <template #aside>Sidebar</template>
-    <template #main>Main</template>
-    <template #footer>Footer</template>
-  </Layout>
+  <timer></timer>
   <form @submit.prevent="addTodo">
     <fieldset role="group">
       <input type="text" placeholder="Tâche à effectuer" v-model="newTodo">
@@ -33,8 +28,7 @@
 <script setup>
 import {computed,onMounted, ref} from "vue";
 import Checkbox from './Checkbox.vue';
-import Button from './Button.vue';
-import Layout from "@/Layout.vue";
+import Timer from "@/Timer.vue";
 
 const newTodo = ref('')
 const hideCompleted = ref(false)
