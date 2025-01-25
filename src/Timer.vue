@@ -4,13 +4,18 @@
   </div>
 </template>
 <script setup>
-import {onMounted, ref} from "vue";
+import {onMounted, onUnmounted, ref} from "vue";
 
 const time = ref(0)
+let timer
 
 onMounted(() => {
-  setInterval(() => {
+  timer =   setInterval(() => {
     time.value++
   }, 1_000)
+})
+
+onUnmounted(() => {
+  clearInterval(timer)
 })
 </script>
