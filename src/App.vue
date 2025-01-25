@@ -1,6 +1,7 @@
 <template>
   <h1>Ma todo-list :</h1>
-  <timer></timer>
+  <button @click="showTimer = !showTimer">Afficher / masquer</button>
+  <Timer v-if="showTimer" />
   <form @submit.prevent="addTodo">
     <fieldset role="group">
       <input type="text" placeholder="Tâche à effectuer" v-model="newTodo">
@@ -33,6 +34,8 @@ import Timer from "@/Timer.vue";
 const newTodo = ref('')
 const hideCompleted = ref(false)
 const todos = ref([])
+
+const showTimer = ref(true);
 
 onMounted(() => {
   fetch('https://jsonplaceholder.typicode.com/todos')
