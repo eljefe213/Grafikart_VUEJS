@@ -38,15 +38,9 @@ import Layout from "@/Layout.vue";
 
 const newTodo = ref('')
 const hideCompleted = ref(false)
-const todos = ref([{
-  title: 'Tâche de test',
-  completed: true,
-  date: 1,
-},{
-  title: 'Tâche à faire',
-  completed: false,
-  date: 2,
-}])
+const todos = ref([])
+
+
 const addTodo = () => {
   todos.value.push({
     title: newTodo.value,
