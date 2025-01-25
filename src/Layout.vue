@@ -1,16 +1,16 @@
 <template>
   <div class="layout">
     <header v-if="$slots.header">
-      <slot name="header"></slot>
+      <slot name="header">1</slot>
     </header>
     <aside>
-      <slot name="aside"></slot>
+      <slot name="aside">2</slot>
     </aside>
     <main>
-      <slot name="main"></slot>
+      <slot name="main">3</slot>
     </main>
     <footer>
-      <slot name="footer"></slot>
+      <slot name="footer">4</slot>
     </footer>
   </div>
 </template>
