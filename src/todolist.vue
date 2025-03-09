@@ -29,7 +29,7 @@ const addTodo = () => {
   })
   newTodo.value = ''
 }
-const sortedTodos = computed(() => {
+const sortedTodos = () => {
   return todos.value.toSorted((a, b) => a.completed > b.completed ? 1 : -1)
 
 })
