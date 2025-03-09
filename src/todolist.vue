@@ -21,9 +21,6 @@ import {ref} from "vue";
 
 const newTodo = ref('')
 const todos = ref([])
-
-const showTimer = ref(true);
-
 const addTodo = () => {
   todos.value.push({
     title: newTodo.value,
